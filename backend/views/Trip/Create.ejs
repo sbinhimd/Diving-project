@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Trip</title>
+</head>
+<body>
+    <h2>Create Trip</h2>
+    <form action="/trips" method="POST">
+        title: <input type="text" name="TripTitle" /><br/>
+        Price: <input type="text" name="Price" /><br/>
+        Date: <input type="text" name="StartDate" /><br/>
+        StartTime:<input type="text" name="StartTime" /><br/>
+        am : <input type="radio" name="S-am" id="S-am">
+        pm : <input type="radio" name="P-pm" id="P-pm"> <br/>
+        EndTime: <input type="text" name="EndTime" /><br/>
+        am : <input type="radio" name="E-am" id="E-am" checked>
+        pm : <input type="radio" name="E-pm" id="E-pm"> <br/>
+        DeparturePoint: <input type="text" name="DeparturePoint" /><br/>
+        Overview: <input type="text" name="Description" /><br/>
+        <br/>
+        <input type="submit" name="" value="Submit Changes"/>
+    </form>
+</body>
+</html> 

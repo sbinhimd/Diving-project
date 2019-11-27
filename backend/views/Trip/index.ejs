@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Trips</h1>
+        <ul>
+            <% Trips.forEach( trip => { %>
+                <li>
+                    The
+                    <a href="/trips/<%= trip.id; %>">
+                        <%=trip.TripTitle; %>
+                    </a>
+                    <br/>
+                   
+                   <button> <a href="/trips/edit/<%=trip.id%>">Edit</a> </button> 
+                    <form action="/trips/<%=trip.id%>?_method=DELETE" method="POST">
+                        <input type="submit" value="DELETE"/>
+                    </form>
+                </li>
+            <% }) %>
+        </ul>
+
+        <nav>
+            <a href="trips/create">Create a New Trip</a>
+        </nav>
+    </body>
+</html> 

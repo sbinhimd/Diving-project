@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Edit courses</h2>
+    <form action="/corses/edit/<%=course._id%>?_method=PUT" method="POST">
+        title: <input type="text" name="CourseTitle"  value="<%=course.CourseTitle%>" /><br/>
+        Description: <input type="text" name="Description" value="<%=course.Description%>" /><br/>
+        Price: <input type="text" name="Price" value="<%=course.Price%>" /><br/>
+        StartDate: <input type="text" name="StartDate"  value="<%=course.StartDate%>" /><br/>
+        EndDate: <input type="text" name="EndDate" value="<%=course.EndDate%>" /><br/>
+        ImageUrl: <input type="text" name="ImageUrl" value="<%=course.ImageUrl%>" /><br/>
+        <br/>
+        <input type="submit">
+
+</body>
+</html>

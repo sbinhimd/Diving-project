@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Corses</h1>
+        <ul>
+            <% Corses.forEach( Corse => { %>
+                <li>
+                    The
+                        <%=Corse.CourseTitle ; %>
+                    </a>
+                    <br/>
+                    <h1>   Corse name : <%= Corse.CourseTitle %></h1> <br/>
+                    <p>   Description :  <%=Corse.Description  %></p>
+                       <p>  Price :  <%=Corse.Price  %></p><br/>
+                    <p>   Start Date: <%=Corse.StartDate  %></p><br/>
+               <p> End Date : <%=Corse.EndDate  %></p><br/>
+                </li>
+            <% }) %>
+        </ul>
+    </body>
+</html> 

@@ -1,0 +1,59 @@
+body{
+  background-color: rgb(250, 250, 250);  
+}
+
+.contenerpord {
+
+    display: flex;
+    margin: 30px;
+   
+}
+.left h2 ,h4 ,h3 ,h5 {
+text-align: center;
+cursor: default;
+
+}
+.rihgt{
+    height: 504px;
+    width: 800px;
+    margin-left: 30px ;
+    border-radius: 10px;
+
+}
+.Instructors{
+    height: 30px;
+    width: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.561);
+
+}
+.namebox{
+margin: 10px 0px;
+height: 50px;
+width: 250px;
+border: 1px solid black;
+border-radius: 10px;
+background:  linear-gradient(to top right,  #0b010f96   0%,#181e25 100%)
+}
+.namebox:hover{
+  background: rgba(219, 241, 237, 0.342);
+  color: #0b010f;
+
+    }
+
+    img{
+
+        margin: 10px;
+    }
+
+.coror {
+    color: aquamarine;
+
+}
+.corors {
+    color: #0b010f;
+
+}
+.frame{
+    width:100%;
+    margin-right: 400px;
+}

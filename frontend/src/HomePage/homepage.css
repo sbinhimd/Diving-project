@@ -1,0 +1,89 @@
+div.backGraound{
+ 
+    width: 100%;
+    margin: 0 auto;
+    background-image: url("https://belizedivingservices.com/wp-content/uploads/coral-reefs-featured.jpg");
+    height: 750px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  opacity: 0.7;
+  background-color: #f2f0f0;
+  
+}
+.FindTrip{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 50%;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    font-weight: 100%;
+    text-align: center;
+    color: black;
+    font-size: 120px;
+}
+.calnder{
+    position: absolute;
+    top: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+background-color: white;
+    text-align: center;
+    z-index: 10;
+
+}
+.FindBorder{
+     width: 50%;
+     height: 30%;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%,-50%);
+    font-weight: 100%;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    border: solid black;
+    opacity: 0.5;
+    background-color: white;
+}
+.homDown{
+    width:100%;
+ /* letter-spacing: ; */
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.Col1{
+    width: 50%;
+    height: 30%;
+   position: absolute;
+   top: 60%;
+   left: 50%;
+   z-index: 2;
+   transform: translate(-50%,-50%);
+   font-weight: 100%;
+   text-align: center;
+   z-index: 10;
+   border: solid black;
+   background-color: white;
+}
+.sq{
+    width: 2000%;
+    height: 90%;
+    color: rgb(255, 255, 255);
+    background-color: #5f9dee;
+  margin-left:35%;
+  padding-bottom: 100%;
+    
+}
+
+.shopbtn{
+    margin-top: 30px;
+    text-align: center;
+    padding-bottom: 50px;
+    margin-left:45%;
+}
