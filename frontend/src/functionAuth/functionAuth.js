@@ -1,4 +1,5 @@
 import axios  from "axios"
+import Swal from 'sweetalert2'
 
 // register
 export const register = (newuser)=>{
@@ -17,6 +18,14 @@ export const login = (user)=>{
             if(token.data.token !== undefined){
 localStorage.setItem('usertoken' , token.data.token)
          console.log("after set token to storage");
+            }else{
+                Swal.fire({
+                    position: 'top-mid',
+                    icon: 'error',
+                    title: 'Your email or password is wrong',
+                    showConfirmButton: false,
+                    timer: 1500
+                  }) 
             }
          
          

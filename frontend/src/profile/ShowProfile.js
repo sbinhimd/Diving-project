@@ -73,9 +73,10 @@ export default class ShowProfile extends Component {
                               
                               <img alt="email icon" src="https://freeiconshop.com/wp-content/uploads/edd/email-flat.png" width="40px" height="40px"/>
                           </a>
-                        <NavLink to="profile/edit"> <button>Edit Profile</button> </NavLink>
+                       
                       </div>
-                      <div className="desc">Profile Created: {date[0]}-{date[1]} </div>
+                      <NavLink to="profile/edit"> <button>Edit Profile</button> </NavLink>
+                      <div  style= {{paddingBottom:"20px"}} className="desc">Profile Created: {date[0]}-{date[1]} </div>
                   </div>
       
               </div>

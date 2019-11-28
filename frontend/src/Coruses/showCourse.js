@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import './courses.css'
-import { Button } from 'react-bootstrap'
+import { Button } from 'semantic-ui-react'
 export default class showCourse extends Component {
   state = {
     data: this.props.course
@@ -29,7 +29,7 @@ export default class showCourse extends Component {
           <h2>Start Date : </h2>{this.state.data.StartDate}
           <h2>End Date : </h2>{this.state.data.EndDate}
         </div>
-        <Button href="/cart" primary style={{marginLeft:"400px"}} onClick = {() => {this.props.handleFaveToggle(this.props.course) } } > Book Now </Button>
+        <Button href="/cart" primary style={{marginLeft:"600px"}} onClick = {() => {this.props.handleFaveToggle(this.props.course) } } > Book Now </Button>
         </div>     
           </>
           )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 
 import { Card, Nav} from "react-bootstrap";
+import Swal from 'sweetalert2'
 
 import './profile.css';
 import 'semantic-ui-css/semantic.min.css'
@@ -58,6 +59,13 @@ onSubmit = (e) => {
       .then(res => {
         console.log(res.data)
       localStorage.removeItem('usertoken')
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Your changes has been saved',
+        showConfirmButton: false,
+        timer: 1500
+      })
       
       
       });
@@ -133,12 +141,11 @@ console.log("email ",decodedEmail)
                           
                           
                           <div className="desc">Profile Created: {date[0]}-{date[1]}</div>
-                          <div className="ui buttons">
+                          <div style= {{paddingBottom:"20px"}} className="ui buttons">
 <button type="reset" className="ui button">Reset</button> 
   <div className="or"></div>
   <button type="submit" className="ui positive button">Save</button>
-</div>
-                      </div>
+</div>    </div>
 
 </div>  
             </div>

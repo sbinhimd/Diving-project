@@ -59,8 +59,8 @@ export default class homepage extends Component {
     </Col>
     <Col lg>
     <div className="sq"> </div>
-    </Col> <Row> <Col style={{marginTop:"30px"}} lg>
-<Image style={{width:"200%", marginLeft:"-320px",marginTop:"30px"}} src="https://ambergrisdivers.com/wp-content/uploads/2018/11/padi-open-water-diver-course-990x490.jpg"  /></Col>
+    </Col> <Row style={{marginTop:"-30px"}}> <Col  lg>
+<Image style={{width:"200%", marginLeft:"-320px",marginTop:"30px"}} src="https://belizedivingservices.com/wp-content/uploads/coral-reefs-featured.jpg"  /></Col>
   <Col lg>
     <h1 style={{fontSize:"40px",marginTop:"160px",marginLeft:"45%" }}>IT'S DIFFERENT EVERYWHERE YOU GO, EVERY TIME YOU GO</h1> 
     <div className = 'shopbtn'>

@@ -3,6 +3,7 @@ import { Card } from "react-bootstrap";
 import './profile.css';
 import jwt_decode from 'jwt-decode'
 import axios from 'axios'
+import Swal from 'sweetalert2'
 
 export default class ShowProfile extends Component {
 
@@ -28,6 +29,13 @@ export default class ShowProfile extends Component {
             .then(res => {
               console.log(res.data)
             localStorage.removeItem('usertoken')
+            Swal.fire({
+              position: 'top-mid',
+              icon: 'success',
+              title: 'Your password has been saved',
+              showConfirmButton: false,
+              timer: 1500
+            })
 
             });
         
@@ -89,13 +97,13 @@ export default class ShowProfile extends Component {
                           <form onSubmit={this.onSubmit}> 
                           <input type="password" name="password" onChange={this.onchangeHanler} placeholder="new password"/>
 
-                         
-                          </form>
-                           <div className="ui buttons">
+                          <div className="ui buttons">
 <button type="reset" className="ui button">Reset</button> 
   <div className="or"></div>
   <button type="submit" className="ui positive button">Save</button>
 </div>
+                          </form>
+                          
                       </div>
                       <div className="desc">
                       {/* {bio} */}

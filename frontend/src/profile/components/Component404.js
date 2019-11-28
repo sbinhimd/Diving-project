@@ -272,7 +272,8 @@ export default class Component404 extends Component {
           404
         </text>
         <text transform="translate(659.5 213.994)" className="st8 st10" fontSize="24.025">
-        Page not found or Unauthorized Access .
+    
+   Page not found 
         </text>
       </g>
       <g id="ladders">
