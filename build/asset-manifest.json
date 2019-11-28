@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.f0dba69d.chunk.css",
+    "main.js": "/static/js/main.ef13f8ab.chunk.js",
+    "main.js.map": "/static/js/main.ef13f8ab.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.baeb1881.js",
+    "runtime-main.js.map": "/static/js/runtime-main.baeb1881.js.map",
+    "static/css/2.5c74aa39.chunk.css": "/static/css/2.5c74aa39.chunk.css",
+    "static/js/2.63e3cbd4.chunk.js": "/static/js/2.63e3cbd4.chunk.js",
+    "static/js/2.63e3cbd4.chunk.js.map": "/static/js/2.63e3cbd4.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e6c8097145e29e45256e74ec10c88b38.js": "/precache-manifest.e6c8097145e29e45256e74ec10c88b38.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.5c74aa39.chunk.css.map": "/static/css/2.5c74aa39.chunk.css.map",
+    "static/css/main.f0dba69d.chunk.css.map": "/static/css/main.f0dba69d.chunk.css.map",
+    "static/media/semantic.min.css": "/static/media/outline-icons.ef60a4f6.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.baeb1881.js",
+    "static/css/2.5c74aa39.chunk.css",
+    "static/js/2.63e3cbd4.chunk.js",
+    "static/css/main.f0dba69d.chunk.css",
+    "static/js/main.ef13f8ab.chunk.js"
+  ]
+}
