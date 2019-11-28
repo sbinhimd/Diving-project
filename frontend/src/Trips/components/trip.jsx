@@ -12,7 +12,6 @@ var splt = ele.datee.split(' ')
   return splt[0] +  " " + splt[1] + ' ' +splt[2] == this.props.oneDate
 })
 console.log(tripFilter)
-// console.log(this.props.trip)
 let Trips = tripFilter.map(item => 
   <section>
     <div className="container py-3" >
@@ -26,7 +25,7 @@ let Trips = tripFilter.map(item =>
                 <h4 className="card-title">{item.trip.TripTitle}</h4>
                 <p className="card-text">{item.trip.Description} </p>
                 <p className="card-text">{item.trip.Price}</p>
-                <NavLink  style={{width:"50%", marginLeft:"70%"}} to={`/trips/${item.trip._id}`}>Book Now</NavLink>
+                <NavLink  style={{width:"50%", marginLeft:"70%"}} to={`/trips/${item.trip._id}`}>Show</NavLink>
               </div>
             </div>
           </div>
@@ -47,7 +46,7 @@ let Trips = tripFilter.map(item =>
                   <h4 className="card-title">{item.TripTitle}</h4>
                   <p className="card-text">{item.Description} </p>
                   <p className="card-text">{item.Price}</p>
-                  <NavLink  style={{width:"50%", marginLeft:"70%"}} to={`/trips/${item._id}`}>Book Now</NavLink>
+                  <NavLink  style={{width:"50%", marginLeft:"70%"}} to={`/trips/${item._id}`}>Show</NavLink>
                 </div>
               </div>
             </div>

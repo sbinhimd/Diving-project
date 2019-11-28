@@ -14,8 +14,11 @@ export const login = (user)=>{
     return axios.post('http://localhost:5000/user/login' , user)
     .then(token =>{
             //console.log(token.data)
-         localStorage.setItem('usertoken' , token.data.token)
+            if(token.data.token !== undefined){
+localStorage.setItem('usertoken' , token.data.token)
          console.log("after set token to storage");
+            }
+         
          
          return true
     })

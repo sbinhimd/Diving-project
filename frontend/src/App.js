@@ -2,34 +2,26 @@ import React, { Component } from 'react'
 import { Navbar,Nav ,Form,FormControl} from 'react-bootstrap'
 import Home from './HomePage/homepage'
 import Uplod from './uplodimg.js'
-import AdminTrip from './Admin'
+import Admin from './Admin'
 import './App.css'
-import {
-  BrowserRouter, Switch,
-  Route, NavLink, withRouter
-} from 'react-router-dom';
+import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import axios from 'axios'
 import Courses from './Coruses/courses'
 import Show from './Coruses/showCourse'
 import Trips from './Trips/components/trip'
 import TripShow from './Trips/components/trips'
-// import LondingPage from './components/container/LondingPage'
 import Login from './components/container/Login'
 import Register from './components/container/Register'
 import ShowProfile from './profile/ShowProfile'
-import Trip from './components/container/Trip'
-// import { sign } from 'crypto';
-// import jwtDecode from 'jwt-decode'
- import { Icon,Button,Input, Menu} from 'semantic-ui-react';
+import { Icon,Button} from 'semantic-ui-react';
 import 'semantic-ui-css/semantic.min.css'
-import NaveBar from './components/NaveBar/NaveBar.js';
 import DivingLocations from "./Locations/DivingLocations";
 import EditProfile from "./profile/EditProfile";
 import Component404 from './profile/components/Component404'
 import Cart from './Cart/Cart'
+import jwt_decode from 'jwt-decode'
 import ChangedPassword from './profile/ChangePassword.js'
-// import Nav from './components/NaveBar'
-// import jwt_decode from 'jwt-decode'
+
 export default class App extends Component {
   state = {
     loading: true,
@@ -57,14 +49,6 @@ export default class App extends Component {
       localStorage.setItem("cart",JSON.stringify(this.state.addtocart))
   }
   loadData = () => {
-    // const token = localStorage.usertoken
-    // if(token){
-    //   const decoded = jwt_decode(token)
-    // console.log(decoded)
-    // //this.setState(decoded.user)
-    // }else{
-    //   this.props.history.push('/login')
-    // }
     this.setState({ loading: true });
     return axios
       .get(`http://localhost:5000/Profile/5ddb9b0078680b43b09ee539`)
@@ -79,8 +63,6 @@ export default class App extends Component {
       .catch(error => {
         console.error("error: ", error);
         this.setState({
-          // objects cannot be used as a react child
-          // -> <p>{error}</p> would throw otherwise
           error: `${error}`,
           loading: false
         });
@@ -106,7 +88,14 @@ export default class App extends Component {
     this.getCourses()
     this.getTrips()
     let token = localStorage.usertoken
-    //console.log("toek: ",token)
+    if(token){
+      const decoded= jwt_decode(token)
+      const admin = decoded.user.isAdmin
+      console.log("is ",admin);
+      this.setState({isAdmin:admin})
+      console.log(this.state.isAdmin);
+    }
+    
   }
 // ==============
 changetheDateToFilter=(allDate , oneDate , boole)=>{
@@ -124,18 +113,6 @@ handleLogout = () =>{
   render() {
     console.log(this.state.alldate)
     console.log(this.state.oneDate)
-    // const { loading, error, data } = this.state;
-    // if (loading) {
-    //   return <p>Loading ...</p>;
-    // }
-    // if (error) {
-    //   return (
-    //     <p>
-    //       There was an error loading.{" "}
-    //       <button onClick={this.loadData}>Try again</button>
-    //     </p>
-    //   );
-    // }
     return (
        <div >
  <Navbar fixed={'top'} style={{backgroundColor:"white",  width: "100%",height: "91px",  backgroundColor: "#1e56a0" }}  expand="lg">
@@ -216,7 +193,7 @@ handleLogout = () =>{
 
             <Route exact path="/login" component={Login} />
             <Route exact path="/Uplod" component={Uplod} />
-            <Route exact path="/admin" component= {AdminTrip} render={(props)=> (this.state.isAdmin) ? <AdminTrip />: console.log("http://localhost:5000/corsess") } />
+            { this.state.isAdmin ? <Route exact path="/admin" component= {Admin} /> : console.log("Sorry you are not admin ") } 
             <Route exact path="/Profile" render={props => <ShowProfile {...props} /*response={data}*//>}/>
             <Route  path="/locations" component={DivingLocations} />
             <Route  exact path="/profile/Edit/changePassword" render={props => (

@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import '../trip.css'
 import {Button} from 'semantic-ui-react'
+import { NavLink } from 'react-router-dom';
 export default class showCourse extends Component {
 
   state = {
@@ -38,10 +39,9 @@ export default class showCourse extends Component {
           <h2>DeparturePoint : </h2>{this.state.data.DeparturePoint}
           <h2>Overview : </h2>{this.state.data.Description}
         </div>
-        <Button  onClick = {() => {this.props.handleFaveToggle(this.props.trip) } } > Book Now </Button>
+        <Button href="/cart" style={{marginLeft:"400px"}} primary onClick = {() => {this.props.handleFaveToggle(this.props.trip) } } > Book Now </Button>
 </div>
-   
-          </>
+        </>
           )
         }
       }

@@ -26,12 +26,12 @@ onSubmitHandelr = async (e)=>{
             <Form onSubmit={this.onSubmitHandelr} style={{paddingTop : "150px"}}>
             <Form.Field>
                 <label>email</label>
-                <input placeholder='email' name="email" 
+                <input type ="email" placeholder='email' name="email" 
                  onChange ={this.onChangHandler}/>
             </Form.Field>
             <Form.Field>
                 <label>password</label>
-                <input placeholder='password'  name = "password"
+                <input type="password" placeholder='password'  name = "password"
                  onChange ={this.onChangHandler}/>
             </Form.Field>
             <Form.Field>

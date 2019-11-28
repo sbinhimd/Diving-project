@@ -106,7 +106,7 @@ console.log("email ",decodedEmail)
           
                           </div>
                           <div className="avatar">
-                              <img alt="Header"  src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"/>
+                              <img alt="Header"  src="https://image.flaticon.com/icons/png/512/206/206895.png"/>
                               </div>
                           <div className="info">
                               <div className="title">
@@ -133,12 +133,13 @@ console.log("email ",decodedEmail)
                           
                           
                           <div className="desc">Profile Created: {date[0]}-{date[1]}</div>
-                      </div>
-<div className="ui buttons">
+                          <div className="ui buttons">
 <button type="reset" className="ui button">Reset</button> 
   <div className="or"></div>
   <button type="submit" className="ui positive button">Save</button>
 </div>
+                      </div>
+
 </div>  
             </div>
             </form>

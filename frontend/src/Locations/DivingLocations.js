@@ -5,8 +5,8 @@ import {Col,Row,Form} from 'react-bootstrap'
 export default class DivingLocations extends Component {
 
     state={
-        Loc:"21.599033,39.064878",
-        Name:"Desert Sea Divers",
+        Loc:"21.541623,38.956837",
+        Name:"Orca Divers SA",
         Data:"",
         className:""
         
@@ -19,18 +19,19 @@ export default class DivingLocations extends Component {
        
         return (
             <div  >
-            <h4 >Select Locations</h4> 
+           
              <Row >
        <Col style ={{margin:"30px"}}>  <div style ={{width:"80%",paddingTop : "200px"}}>
+            <h4 >Select Locations</h4> 
             <div class="ui vertical pointing menu">
   <a class="item" onClick={()=> this.handelEventSelect("21.599033,39.064878","Desert Sea Divers")}>
-         First Address 
+  Desert Sea Divers 
   </a>
   <a class="item" onClick={()=> this.handelEventSelect("21.493797,39.075631","Saati Adventures")}>
-          Second Address 
+  Saati Adventures 
   </a>
-  <a class="item" onClick={()=> this.handelEventSelect("21.541623,38.956837","Orca Divers SA")}>
-           Third Address 
+  <a class=" item" onClick={()=> this.handelEventSelect("21.541623,38.956837","Orca Divers SA")}>
+  Orca Divers SA 
   </a>
 </div>
         </div>

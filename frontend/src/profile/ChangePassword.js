@@ -80,7 +80,7 @@ export default class ShowProfile extends Component {
       
                       </div>
                       <div className="avatar">
-                          <img alt="Header"  src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"/>
+                          <img alt="Header"  src="https://image.flaticon.com/icons/png/512/206/206895.png"/>
                           </div>
                       <div className="info">
                           <div className="title">
@@ -89,13 +89,13 @@ export default class ShowProfile extends Component {
                           <form onSubmit={this.onSubmit}> 
                           <input type="password" name="password" onChange={this.onchangeHanler} placeholder="new password"/>
 
-                          <div className="ui buttons">
+                         
+                          </form>
+                           <div className="ui buttons">
 <button type="reset" className="ui button">Reset</button> 
   <div className="or"></div>
   <button type="submit" className="ui positive button">Save</button>
 </div>
-                          </form>
-                          
                       </div>
                       <div className="desc">
                       {/* {bio} */}

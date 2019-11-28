@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './courses.css'
-import Cart from '../Cart/Cart'
 import { Button } from 'react-bootstrap'
 export default class showCourse extends Component {
   state = {
@@ -13,8 +12,7 @@ export default class showCourse extends Component {
       this.setState({
         addtocart : temp,
         select : select
-       }) 
-  }
+       }) }
   render() {
     return (
       <>
@@ -31,10 +29,7 @@ export default class showCourse extends Component {
           <h2>Start Date : </h2>{this.state.data.StartDate}
           <h2>End Date : </h2>{this.state.data.EndDate}
         </div>
-<Button  onClick = {() => {this.props.handleFaveToggle(this.props.course) } } > Book Now </Button>
-{console.log(this.props.select)}
-{console.log(this.props.addtocart)}
-{/* { this.props.addtocart.length !== 0 &&   <Cart addtocart = {this.props.addtocart} />} */}
+        <Button href="/cart" primary style={{marginLeft:"400px"}} onClick = {() => {this.props.handleFaveToggle(this.props.course) } } > Book Now </Button>
         </div>     
           </>
           )

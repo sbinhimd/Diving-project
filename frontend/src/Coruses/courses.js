@@ -1,22 +1,8 @@
-import axios from 'axios'
 import React, { Component } from 'react'
-import {
-    BrowserRouter, Switch,
-    Route, NavLink
-  } from 'react-router-dom';
-import {Card,Button,Col,Row , Image} from 'react-bootstrap'
+import { NavLink } from 'react-router-dom';
 import './courses.css'
-import Show from './showCourse'
 export default class courses extends Component {
-//     componentDidMount() {
-//         axios.get(`http://localhost:5000/corses`)
-//         // .then(res => res.json())
-//           .then(res => {
-//               console.log(res);
-//             const data = res.data;
-//             this.setState({ courses:data });
-//           })
-//       }
+
     render() {
   let course = this.props.courses.map(item => 
 <section >
@@ -31,7 +17,7 @@ export default class courses extends Component {
               <h4 className="card-title">{item.CourseTitle}</h4>
               <p className="card-text">{item.overview} </p>
               <p className="card-text">{item.Price}</p>
-              <NavLink  style={{width:"50%", marginLeft:"70%"}}  to={`/courses/${item._id}`}>Book Now</NavLink>
+              <NavLink  style={{width:"50%", marginLeft:"70%"}}  to={`/courses/${item._id}`}>Show</NavLink>
             </div>
           </div>
         </div>

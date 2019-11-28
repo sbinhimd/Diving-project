@@ -51,7 +51,7 @@ export default class ShowProfile extends Component {
       
                       </div>
                       <div className="avatar">
-                          <img alt="Header"  src="https://i.pinimg.com/originals/7c/c7/a6/7cc7a630624d20f7797cb4c8e93c09c1.png"/>
+                          <img alt="Header"  src="https://image.flaticon.com/icons/png/512/206/206895.png"/>
                           </div>
                       <div className="info">
                           <div className="title">
