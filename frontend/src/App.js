@@ -145,24 +145,6 @@ handleLogout = () =>{
       </Button.Content>
     </Button> 
     </Form>
-    {/* <Form className ="d-flex justify-content-around" inline>
-    <FormControl type="text" placeholder="Search" className="mr-sm-2" />
-      <Button style = {{marginRight:"10px"}} variant="outline-secondary">Search</Button>
-    <a style = {{marginRight:"10px"}}  href ="/profile" onClick={()=>this.loadData()}><img
-            src="https://i.ibb.co/t3S57zK/scuba-diving-recreation-13-512.png"
-            width="40"
-            height="40"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
-          /></a>
-      <a href ="/cart"><img
-            src="https://icon-library.net/images/cart-icon-png-white/cart-icon-png-white-16.jpg"
-            width="40"
-            height="40"
-            className="d-inline-block align-top"
-            alt="React Bootstrap logo"
-          /></a>
-    </Form> */}
   </Navbar.Collapse>
   <BrowserRouter>
 <Navbar className="d-flex justify-content-around"  fixed={'top'} style = {{ marginTop:"90px", fontSize:"20px" ,opacity: "1",backgroundColor: "#d6e4f0"} }>
