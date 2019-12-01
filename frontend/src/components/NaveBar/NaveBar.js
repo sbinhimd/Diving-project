@@ -21,7 +21,7 @@ class NaveBar extends Component {
     handleLogout = () =>{
       localStorage.removeItem('usertoken')
 
-      window.location.href = "http://localhost:3000/home";
+      window.location.href = "/home";
     
     }
 

@@ -51,7 +51,7 @@ export default class App extends Component {
   loadData = () => {
     this.setState({ loading: true });
     return axios
-      .get(`http://localhost:5000/Profile/5ddb9b0078680b43b09ee539`)
+      .get(`/Profile/5ddb9b0078680b43b09ee539`)
       .then(result => {
         console.log(result);
         this.setState({
@@ -69,14 +69,14 @@ export default class App extends Component {
       });
   };
   getCourses = () => {
-    fetch('http://localhost:5000/corses')
+    fetch('/corses')
     .then(res => res.json())
     .then(result => { console.log(result);
       this.setState({ courses : result})})
     .catch(e => console.log(e))
   }
   getTrips = () => {
-    fetch('http://localhost:5000/trips')
+    fetch('/trips')
     .then(res => res.json())
     .then(result => { 
       console.log(result);

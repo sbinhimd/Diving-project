@@ -15,7 +15,7 @@ export default class uplodimg extends Component {
     fileUploadHandler = () =>{
         // var course = new CoursesData();
         // course.append('ImageUrl',this.state.selectedfile , this.state.selectedfile.name)
-axios.post('http://localhost:5000/corses/new')
+axios.post('/corses/new')
 .then(res => console.log(res))
     }
     render() {
