@@ -7,14 +7,28 @@ const methodOverride = require('method-override')
 
 require('dotenv/config')
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5600;
 
+var allowedOrigins = ["http://localhost:5600", "http://localhost:3001"];
+app.use(
+  cors({
+    origin: function(origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        var message =
+          "The CORS policy for this application does not allow access from origin " +
+          origin;
+        return callback(new Error(message), false);
+      }
+      return callback(null, true);
+    }
+  })
+);
 
 
 
 app.use(express.json())
 app.use(express.static(path.join(__dirname, "build")));
-app.use(cors())
 app.use(express.urlencoded({ extended: false }));
 app.use(methodOverride('_method'))
 app.set('view engine', 'ejs')
