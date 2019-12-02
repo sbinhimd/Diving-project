@@ -1,25 +1,22 @@
 {
-  "name": "diving",
+  "name": "gorgeous-team",
   "version": "1.0.0",
-  "description": "",
+  "description": "Jeddah Diving App",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "cd backend && nodemon server",
-    "react": "cd frontend && npm start",
-    "start": "concurrently - kill-others \"nodemon server\" \"npm react\""
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/SEI-diving/SEI-diving-team.git"
+    "url": "git+https://github.com/SEI-diving/gorgeous-team.git"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/SEI-diving/SEI-diving-team/issues"
+    "url": "https://github.com/SEI-diving/gorgeous-team/issues"
   },
-  "homepage": "https://github.com/SEI-diving/SEI-diving-team#readme",
+  "homepage": "https://github.com/SEI-diving/gorgeous-team#readme",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
