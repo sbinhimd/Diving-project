@@ -55,7 +55,7 @@ onSubmit = (e) => {
   last_name: this.state.last_name,
   email: this.state.email
       }
-  axios.put(`http://localhost:5000/profile/edit/${this.state._id}`, obj)
+  axios.put(`/profile/edit/${this.state._id}`, obj)
       .then(res => {
         console.log(res.data)
       localStorage.removeItem('usertoken')

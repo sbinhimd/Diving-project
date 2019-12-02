@@ -3,7 +3,7 @@ import Swal from 'sweetalert2'
 
 // register
 export const register = (newuser)=>{
-    return axios.post('http://localhost:5000/user/register' ,newuser )
+    return axios.post('/user/register' ,newuser )
     .then(res => console.log("registerd ! "))
     .catch(err => console.log(err))
 }
@@ -12,7 +12,7 @@ export const login = (user)=>{
 //user = email password
 
 
-    return axios.post('http://localhost:5000/user/login' , user)
+    return axios.post('/user/login' , user)
     .then(token =>{
             //console.log(token.data)
             if(token.data.token !== undefined){

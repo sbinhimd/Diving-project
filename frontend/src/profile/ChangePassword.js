@@ -25,7 +25,7 @@ export default class ShowProfile extends Component {
         password: this.state.password
             }
             let token = localStorage.usertoken
-        axios.put(`http://localhost:5000/profile/changePassword/${token}`, obj)
+        axios.put(`/profile/changePassword/${token}`, obj)
             .then(res => {
               console.log(res.data)
             localStorage.removeItem('usertoken')
