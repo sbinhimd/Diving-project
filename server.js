@@ -20,7 +20,7 @@ app.use('/api/trips' , require('./routes/trip'))
 app.use('/api/trip' , require('./routes/tripJson'))
 app.use('/api/corses' , require('./routes/corses'))
 app.use('/api/corsess' , require('./routes/corsesJson'))
-app.use('/api/Profile' , require('./routes/Profile'))
+app.use('/api/Profile' , require('./routes/profile'))
 app.use('/api/user' , require('./routes/user'))
 //dev test
 
