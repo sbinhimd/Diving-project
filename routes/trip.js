@@ -13,7 +13,7 @@ router.get("/", (req, res) => {
 router.get("/create", (req, res) => {
   res.render("Trip/Create");
 });
-//heroku git:remote -a
+
 router.post("/", (req, res) => {
   var newTrip = req.body;
   var trip = new TripData(newTrip);
