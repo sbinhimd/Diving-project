@@ -9,7 +9,17 @@ router.get("/", (req, res) => {
 
   CoursesData.find().then(data => {
 
- res.json(data)
+    res.json(data)
+    // res.render("Courses/index", { Corses: data });
+  });
+});
+
+
+router.get("/local/", (req, res) => {
+
+  CoursesData.find().then(data => {
+
+    // res.json(data)
     res.render("Courses/index", { Corses: data });
   });
 });
