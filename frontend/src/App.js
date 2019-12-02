@@ -51,7 +51,7 @@ export default class App extends Component {
   loadData = () => {
     this.setState({ loading: true });
     return axios
-      .get(`/api//Profile/5ddb9b0078680b43b09ee539`)
+      .get(`/api/Profile/5ddb9b0078680b43b09ee539`)
       .then(result => {
         console.log(result);
         this.setState({
@@ -69,14 +69,14 @@ export default class App extends Component {
       });
   };
   getCourses = () => {
-    fetch('/api//corses')
+    fetch('/api/corses')
     .then(res => res.json())
     .then(result => { console.log(result);
       this.setState({ courses : result})})
     .catch(e => console.log(e))
   }
   getTrips = () => {
-    fetch('/api//trips')
+    fetch('/api/trips')
     .then(res => res.json())
     .then(result => { 
       console.log(result);
