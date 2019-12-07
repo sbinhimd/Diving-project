@@ -22,15 +22,23 @@ export default class ShowProfile extends Component {
         const decoded = jwt_decode(token)
         const decodedUser = decoded.user
         const decodedEmail = decoded.user.email
-
+        const admin = decoded.user.isAdmin
       console.log("Decoded token ",decoded)
       console.log("DecodedUser ",decodedUser)
       console.log("email ",decodedEmail)
        this.setState(decodedUser)
+      
+    if(admin){
+      console.log("is ",admin);
+      this.setState({isAdmin:admin})
+      console.log(this.state.isAdmin);
+    }
       }else{
         this.props.history.push('/login')
       }
+      
       }
+
    render() {
    
    
@@ -76,7 +84,9 @@ export default class ShowProfile extends Component {
                        
                       </div>
                       <NavLink to="profile/edit"> <button>Edit Profile</button> </NavLink>
+                      { this.state.isAdmin ? <NavLink to="admin"> <button>admin page</button> </NavLink> : console.log("Sorry you are not admin ") }   
                       <div  style= {{paddingBottom:"20px"}} className="desc">Profile Created: {date[0]}-{date[1]} </div>
+
                   </div>
       
               </div>

@@ -2,8 +2,19 @@ import { Button, Checkbox, Form } from 'semantic-ui-react'
 import React, { Component } from 'react'
 import { login }  from '../../functionAuth/functionAuth'
 import { Nav } from 'react-bootstrap'
+import jwt_decode from 'jwt-decode'
 export default class Register extends Component {
-state ={}
+state ={isAdmin:false}
+componentDidMount(){
+    let token = localStorage.usertoken
+    if(token){
+      const decoded= jwt_decode(token)
+      const admin = decoded.user.isAdmin
+      console.log("is ",admin);
+      this.setState({isAdmin:admin})
+      console.log(this.state.isAdmin);
+    }
+}
 onChangHandler=(e)=>{
     this.setState({
         [e.target.name] : e.target.value
@@ -12,14 +23,10 @@ onChangHandler=(e)=>{
 onSubmitHandelr = async (e)=>{
     e.preventDefault()
     localStorage.removeItem('usertoken')
-    var test = login(this.state)
+   await login(this.state)
 
-    if(test){ 
-       //  window.location.href = "http://localhost:3000/Profile"; 
-        this.props.history.push('/profile') 
-     
-    }
-}
+    { this.state.isAdmin ?  this.props.history.push('/admin')  :  this.props.history.push('/profile')  } }
+
     render() {
         console.log(this.state)
         return (

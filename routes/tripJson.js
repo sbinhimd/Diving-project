@@ -9,7 +9,7 @@ router.get("/", (req, res) => {
   })
 });
 // new Trip
-router.get("/create", (req, res) => {
+router.get("api/create", (req, res) => {
   res.render("Trip/Create");
 });
 
@@ -27,13 +27,13 @@ router.post("/", (req, res) => {
 });
 
 //get single trip
-router.get("/:id", (req, res) => {
+router.get("api/:id", (req, res) => {
   TripData.findById(req.params.id).then(data => {
     res.render("Trip/show", { trip: data });
   });
 });
 
-//delet
+//delete
 router.delete("/:id", (req, res) => {
     TripData.findByIdAndDelete(req.params.id)
     .then(data => {
@@ -42,7 +42,7 @@ router.delete("/:id", (req, res) => {
 });
 
 //update
-router.get("/edit/:id", (req, res) => {
+router.get("api/edit/:id", (req, res) => {
     TripData.findById(req.params.id)
     .then(data => {
       res.render("Trip/edit", { trip : data });
@@ -50,7 +50,7 @@ router.get("/edit/:id", (req, res) => {
     .catch(err => console.log(" error in get/:id "));
 });
 
-router.put("/edit/:id", (req, res) => {
+router.put("api/edit/:id", (req, res) => {
   var updateTrip = req.body;
   TripData.findByIdAndUpdate(req.params.id, updateTrip)
     .then(data => {

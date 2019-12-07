@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const TripData = require("../model/trips");
 
 router.get("/", (req, res) => {
+
   TripData.find({},(error, data)=>{
     res.json(data)
     // res.render("Trip/index", { Trips: data });
@@ -11,6 +12,7 @@ router.get("/", (req, res) => {
 });
 // new Trip
 router.get("/create", (req, res) => {
+  
   res.render("Trip/Create");
 });
 
