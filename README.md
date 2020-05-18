@@ -1,4 +1,8 @@
-Jeddah Diving App
+# Jeddah Diving App
+
+Jeddah Diving website
+https://sei-diving.herokuapp.com
+
 
 It’s a teamwork project to develop a website for Jeddah diving tourism.
 ​
